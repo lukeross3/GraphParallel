@@ -10,7 +10,7 @@ mpiexec -np <num_procs> python3 python/main.py <cl_args>
 ```
 Sample output:
 
-![LearningCurve](https://github.com/lukeross3/GraphParallelPrivate/blob/public/images/rand_100_learn_10000.png)
+![LearningCurve](https://github.com/lukeross3/GraphParallel/blob/master/images/rand_100_learn_10000.png)
 
 Scripts are provided to test and plot the speedup of the method as the number of processors increases (graphs are specified similarly).  Starter PBS scripts are also provided to submit jobs to a PBS job scheduler.  To test speedup locally, use one of the local speedup scripts:
 ```
@@ -22,7 +22,7 @@ Or:
 ```
 Sample output:
 
-![SpeedupCurve](https://github.com/lukeross3/GraphParallelPrivate/blob/public/images/rand_100_sqrt_5000_local_speedup.png)
+![SpeedupCurve](https://github.com/lukeross3/GraphParallel/blob/master/images/rand_100_sqrt_5000_local_speedup.png)
 
 
 The two scripts correspond to two types of computation graphs, discussed in [Parallel Computation Graphs](#parallel-computation-graphs).
