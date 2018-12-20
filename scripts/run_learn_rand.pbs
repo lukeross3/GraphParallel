@@ -1,0 +1,18 @@
+# Script for submitting learning job to PBS
+# Random graph version
+# Note: should only be called from run_spedup.sh script
+
+### PBS Parameters ###
+#!/bin/sh
+#PBS -S /bin/sh
+#PBS -A <allocation>
+#PBS -l qos=<...>
+#PBS -l walltime=00:10:00
+#PBS -l pmem=8gb
+#PBS -q <...>
+#PBS -m n
+#PBS -j oe
+#PBS -V
+
+cd /<path>/GraphParallel
+mpiexec --mca mpi_warn_on_fork 0 -np $n_procs python3 python/main.py --n_nodes $n_nodes --edge_prob $edge_prob --seed $seed --n_iter $n_iter
